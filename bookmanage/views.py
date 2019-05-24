@@ -111,12 +111,12 @@ def borrowinfo(request):
     data = json.loads(request.body.decode('utf-8'))
     openid = data.get("openid")
 
-    borrowed_books = Books.objects.filter(borrow__user__openid = openid, borrow__ifreturn= False)
+    borrowed_books = Borrow.objects.filter(user__openid = openid, ifreturn= False)
 
     return JsonResponse({
         "status": 0, "books":[
-            {"name": book.name, "isbn": book.isbn, "publisher":book.publisher.name, "date": book.borrow.time}
-            for book in borrowed_books]})
+            {"name": b.books.name, "isbn": b.books.isbn, "publisher":b.books.publisher.name, "date": b.time}
+            for b in borrowed_books]})
 
 def showFaculties(request):
     faculties = Faculty.objects.all()
