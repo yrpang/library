@@ -145,6 +145,9 @@ def search(request):
 
     books = Books.objects.filter(Q(name__icontains=keyword)|Q(author__name__icontains=keyword))
 
+    def count(name):
+        return Books.objects.all().filter(name = name).count()
+
     return JsonResponse({
         "status": 0, "books":[
             {"id": book.id, "name": book.name, "isbn": book.isbn,"publisher":book.publisher.name, "num":count(book.name)} 
