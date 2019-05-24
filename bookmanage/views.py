@@ -121,3 +121,16 @@ def showFaculties(request):
     faculties = Faculty.objects.all()
     return JsonResponse({"faculties": [faculty.name
         for faculty in faculties]})
+
+def ShowBookDetail(request):
+    try:
+        book = Books.objects.get(id=book_id)
+    except Books.DoesNotExist:
+        return JsonResponse({
+            "status": "-1",
+            "message": "book do not exist"
+        })
+
+    num = Books.objects.all().filter(name = book.name).count()
+
+    return JsonResponse({"status": 0, "id": book.id, "name": book.name, "isbn": book.isbn,"publisher":book.publisher.name, "num":num})
