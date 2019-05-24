@@ -135,3 +135,17 @@ def ShowBookDetail(request, book_id):
     num = Books.objects.all().filter(name = book.name).count()
 
     return JsonResponse({"status": 0, "id": book.id, "name": book.name, "isbn": book.isbn,"publisher":book.publisher.name, "author": book.author.all()[0].name,"num":num})
+
+def search(request):
+    if request.method == "GET":
+       return HttpResponseForbidden()
+
+    data = json.loads(request.body.decode('utf-8'))
+    keyword = data.get("keyword")
+
+    books = Books.objects.filter(Q(name__icontains=keyword)|Q(author__name__icontains=keyword))
+
+    return JsonResponse({
+        "status": 0, "books":[
+            {"id": book.id, "name": book.name, "isbn": book.isbn,"publisher":book.publisher.name, "num":count(book.name)} 
+            for book in books]})

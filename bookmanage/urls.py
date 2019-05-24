@@ -10,4 +10,5 @@ urlpatterns = [
     path('book/borrow/',views.borrow),
     path('book/<int:book_id>/', views.ShowBookDetail, name='book_detail'),
     path('faculties/',views.showFaculties),
+    path('search/',views.search)
 ]
