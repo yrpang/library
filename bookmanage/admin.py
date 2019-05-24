@@ -20,6 +20,6 @@ admin.site.register(Author, AuthorAdmin)
 class FacultyAdmin(admin.ModelAdmin):
     fields = [ 'id','name']
 
-admin.site.register(Author, FacultyAdmin)
+admin.site.register(Faculty, FacultyAdmin)
 
 
