@@ -28,7 +28,7 @@ class User(models.Model):
     openid = models.CharField(max_length=64,default="null")
     name = models.CharField(max_length=64)
     stu_num = models.BigIntegerField()
-    members = models.ManyToManyField(Books, through='Borrow')
+    members = models.ManyToManyField(Books, through='Borrow',related_name='borrow')
     avatar = models.CharField(max_length=200, default="null")
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     grade = models.CharField(null=True,max_length=64)

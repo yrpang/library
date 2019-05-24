@@ -115,7 +115,7 @@ def borrowinfo(request):
 
     return JsonResponse({
         "status": 0, "books":[
-            {"name": book.name, "isbn": book.isbn, "publisher":book.publisher.name}
+            {"name": book.name, "isbn": book.isbn, "publisher":book.publisher.name, "date": book.borrow.time}
             for book in borrowed_books]})
 
 def showFaculties(request):
