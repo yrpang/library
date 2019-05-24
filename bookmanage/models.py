@@ -5,6 +5,9 @@ class Publisher(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=64)
 
+    def __str__(self):
+        return self.name
+
 class Books(models.Model):
     id = models.AutoField(primary_key=True)
     isbn = models.BigIntegerField(blank=True,null=True)
@@ -19,9 +22,15 @@ class Author(models.Model):
     name = models.CharField(max_length=64)
     book = models.ManyToManyField(Books, related_name='author')
 
+    def __str__(self):
+        return self.name
+
 class Faculty(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=64)
+
+    def __str__(self):
+        return self.name
 
 class User(models.Model):
     id = models.AutoField(primary_key=True)
@@ -33,6 +42,9 @@ class User(models.Model):
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     grade = models.CharField(null=True,max_length=64)
 
+    def __str__(self):
+        return self.name
+
 class Borrow(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -40,3 +52,6 @@ class Borrow(models.Model):
 
     time = models.DateField(default=timezone.now)
     ifreturn = models.BooleanField(null=False, default=False)
+
+    def __str__(self):
+        return self.name
