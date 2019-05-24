@@ -33,7 +33,9 @@ def createuser(request):
     avatar = data.get("avatar"),
     grade = data.get("grade"),
     faculty = data.get("faculty")
-
+    
+    if Faculty.objects.filter(name = faculty).count() == 0:
+        Faculty.objects.create(name = faculty)
     f = Faculty.objects.get(name=faculty)
 
     User.objects.create(openid = openid, name = name, stu_num = stu_num, avatar=avatar, grade = grade, faculty = f)
