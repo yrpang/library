@@ -31,7 +31,7 @@ class User(models.Model):
     members = models.ManyToManyField(Books, through='Borrow')
     avatar = models.CharField(max_length=200, default="null")
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
-    grade = models.IntegerField(null=True)
+    grade = models.CharField(null=True,max_length=64)
 
 class Borrow(models.Model):
     id = models.AutoField(primary_key=True)
