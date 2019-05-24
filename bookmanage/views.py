@@ -114,7 +114,7 @@ def borrowinfo(request):
     borrowed_books = Books.objects.filter(borrow__user__openid = openid, borrow__ifreturn= False)
 
     return JsonResponse({
-        "status": 0, books:[
+        "status": 0, "books":[
             {"name": book.name, "isbn": book.isbn, "publisher":book.publisher.name, "date": book.borrow.time}
             for book in borrowed_books]})
 
