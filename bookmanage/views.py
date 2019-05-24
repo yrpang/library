@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from bookmanage.models import Books, User, Publisher, Author, Borrow, Faculty
 from django.http import HttpResponse, HttpResponseForbidden, JsonResponse
-from django.db.models import Count
+from django.db.models import Count,Q
 import json
 from django.views.decorators.csrf import csrf_exempt
 import requests
