@@ -17,7 +17,7 @@ class Books(models.Model):
 class Author(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=64)
-    book = models.ManyToManyField(Books)
+    book = models.ManyToManyField(Books, related_name='author')
 
 class Faculty(models.Model):
     id = models.AutoField(primary_key=True)
