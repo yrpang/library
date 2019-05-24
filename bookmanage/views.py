@@ -134,4 +134,4 @@ def ShowBookDetail(request, book_id):
 
     num = Books.objects.all().filter(name = book.name).count()
 
-    return JsonResponse({"status": 0, "id": book.id, "name": book.name, "isbn": book.isbn,"publisher":book.publisher.name, "author": book.author[0].name,"num":num})
+    return JsonResponse({"status": 0, "id": book.id, "name": book.name, "isbn": book.isbn,"publisher":book.publisher.name, "author": book.author.all()[0].name,"num":num})
