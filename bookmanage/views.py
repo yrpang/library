@@ -92,7 +92,7 @@ def borrow(request):
 
 
 
-    num = Borrow.objects.filter(user__openid = openid, books__id=book_id, ifreturn = True).count()
+    num = Borrow.objects.filter(user__openid = openid, books__id=book_id, ifreturn = False).count()
 
     if num >= 1:
         return JsonResponse({
