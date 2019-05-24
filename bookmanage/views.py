@@ -34,7 +34,9 @@ def createuser(request):
     grade = data.get("grade"),
     faculty = data.get("faculty")
 
-    User.objects.create(openid = openid, name = name, stu_num = stu_num, avatar=avatar, grade = grade, faculty = faculty)
+    f = Faculty.objects.get(name=faculty)
+
+    User.objects.create(openid = openid, name = name, stu_num = stu_num, avatar=avatar, grade = grade, faculty = f)
 
     return JsonResponse({"status": 0})
 
