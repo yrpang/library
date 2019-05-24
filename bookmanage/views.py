@@ -122,7 +122,7 @@ def showFaculties(request):
     return JsonResponse({"faculties": [faculty.name
         for faculty in faculties]})
 
-def ShowBookDetail(request):
+def ShowBookDetail(request, book_id):
     try:
         book = Books.objects.get(id=book_id)
     except Books.DoesNotExist:
