@@ -1,0 +1,42 @@
+<!--pages/createUser/createUser.wxml-->
+<form bindsubmit="submit">
+  <view class='block1'>
+    <view class='input'>
+      <text class='name'>姓名</text>
+      <input placeholder="提交后不可修改 请认真核对" class='input2' name='name' type='text' value='{{name}}'></input>
+    </view>
+
+    <view class='border'></view>
+    <view class='input'>
+      <text class='name'>年级</text>
+      <picker bindchange="PickGrade" class='input2' value="{{grade_index}}" range="{{grades}}" range-key='name'>
+        <view class="input2">{{grades[grade_index].name}}</view>
+      </picker>
+    </view>
+
+
+    <view class='border'></view>
+
+    <view class='input'>
+      <text class='name'>学院</text>
+      <picker bindchange="PickFaculty" class='input2' value="{{faculty_index}}" range="{{faculties}}">
+        <view class="input2">{{faculties[faculty_index]}}</view>
+      </picker>
+    </view>
+
+    <view class='border'></view>
+
+    <view class='input'>
+      <text class='name'>学号</text>
+      <input placeholder="提交后不可修改 请认真核对" class='input2' name='stu_num' type='number' value='{{stu_num}}'></input>
+    </view>
+
+  </view>
+
+
+  <view class='bottom'>
+    <button class='button' form-type="submit">提交</button>
+  </view>
+
+
+</form>

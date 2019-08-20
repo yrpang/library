@@ -1,0 +1,30 @@
+<!--pages/bookdetail/bookdetail.wxml-->
+<view class='input'>
+
+  <text class='input-name'>书名</text>
+  <input class='input-box' disabled='true' value='{{name}}'></input>
+</view>
+
+<view class='input'>
+
+  <text class='input-name'>出版社</text>
+  <input class='input-box' disabled='true' value='{{publisher}}'></input>
+</view>
+
+<view class='input'>
+
+  <text class='input-name'>作者</text>
+  <input class='input-box' disabled='true' value='{{author}}'></input>
+</view>
+
+<view class='input'>
+
+  <text class='input-name'>馆藏书量</text>
+  <input class='input-box' disabled='true' value='{{num}}'></input>
+</view>
+
+
+
+<view class='bottom' >
+  <button class='button' bindtap='borrow'>借阅</button>
+</view>

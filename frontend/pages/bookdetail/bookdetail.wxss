@@ -1,0 +1,50 @@
+/* pages/bookdetail/bookdetail.wxss */
+
+.input {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+
+.input-name {
+  font-family: PingFangSC-Regular;
+  font-size: 34rpx;
+  color: #000;
+  letter-spacing: 0;
+  margin-left: 31rpx;
+}
+
+.input-box {
+  position: absolute;
+  left: 211rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 34rpx;
+  color: #000;
+  letter-spacing: 0;
+}
+
+.bottom {
+  position:fixed; 
+  bottom:0rpx;
+  width: 750rpx;
+  height: 167rpx;
+  background-color: #fff;
+  
+}
+
+.button {
+  height: 92rpx;
+  background-color: #09bb07;
+  color: #FFFFFF;
+  border-radius: 0;
+  position:fixed; 
+  bottom:65rpx;
+  width: 750rpx;
+}
+
+

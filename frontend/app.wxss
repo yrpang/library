@@ -1,0 +1,65 @@
+/**app.wxss**/
+
+page {
+  background-color: #f3f3f3;
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+checkbox, radio{
+  margin-right: 10rpx;
+}
+
+form{
+  width: 100%;
+}
+
+/* 页面卡片 */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 20rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* lib */
+.strong{
+  font-weight: bold;
+}
+.tc{
+  text-align: center;
+}
+
+
+/* 页面底部提交按钮 */
+.bottom {
+  position:fixed; 
+  bottom:0rpx;
+  width: 750rpx;
+  height: 167rpx;
+  background-color: rgb(255, 255, 255);
+  z-index: 100;
+  
+}
+
+.button {
+  height: 92rpx;
+  background-color: #09bb07;
+
+  font-family: PingFangSC-Regular;
+  font-size: 36rpx;
+  text-align: center;
+  color: #FFFFFF;
+
+  border-radius: 0;
+  position:fixed; 
+  bottom:65rpx;
+  width: 710rpx;
+  margin-left: 20rpx;
+  
+}

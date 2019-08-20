@@ -1,0 +1,83 @@
+/* pages/createUser/createUser.wxss */
+.block1{
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 352rpx;
+  margin-top: 20rpx;
+}
+
+.block2{
+  background: #FFFFFF;
+  height: 176rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20rpx;
+}
+
+.input {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.name {
+  font-family: PingFangSC-Regular;
+  font-size: 34rpx;
+  color: #000;
+  letter-spacing: 0;
+  margin-left: 31rpx;
+  width: 100rpx;
+}
+
+.input2 {
+  margin-left: 5rpx;
+  width: 500rpx;
+}
+
+.border {
+  border-top: 0.5rpx solid #e5e5e5;
+  width: 720rpx;
+}
+
+.block3 {
+  width: 100%;
+  height: 280rpx;
+  background: white;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.block3 .name {
+  font-family: PingFangSC-Regular;
+  font-size: 34rpx;
+  color: #000;
+  margin-top: 20rpx;
+  margin-left: 31rpx;
+  width: 200rpx;
+  height: 44rpx;
+}
+
+
+.block3 .input2 {
+  margin-top: 8rpx;
+  margin-left: 31rpx;
+  width: 90%;
+  max-height: 200rpx;
+  line-height: 36 rpx;
+}
+
+
+
+

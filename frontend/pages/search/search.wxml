@@ -1,0 +1,28 @@
+<!--pages/search/search.wxml-->
+<view class='input'>
+  <text class='name'>关键词</text>
+  <input placeholder="请输入关键词" class='input2' type='text' bindinput='input'></input>
+</view>
+<view class="container">
+  <view class='item' wx:for="{{books}}" wx:for-item="book" wx:key="{{book.id}}">
+    <view class='item-up' catchtap='toBookDetail' data-book_id='{{book.id}}'>
+      <view class='title'>{{book.name}}</view>
+      <text class='title'> {{book.isbn}} </text>
+      <text class='title'> {{book.publisher}} </text>
+    </view>
+
+    <view class='item-down'>
+
+      <view class='follower'>馆藏还剩{{book.num}}本书</view>
+
+
+
+
+    </view>
+
+  </view>
+</view>
+
+<view class='bottom'>
+  <button class='button' bindtap='search'>查询</button>
+</view>
